@@ -408,10 +408,11 @@ button.onclick = function() {
     calculates();
 
     var graph = document.querySelector('.graph-cont');
-
-        graph.classList.add('togglegraph');
+    graph.classList.add('togglegraph');
+    var curveResult = document.querySelector('.curve__result');
+    curveResult.textContent = makeid();
 }
-// НИЧЕГО НЕ ПОЛУЧАЕТСЯ, СТАВИМ БЭКГРАУНД
+
 // // For a bubble chart
 // var ctx = document.getElementById('myChart').getContext('2d');
 // var chart = new Chart(ctx, {
@@ -432,24 +433,24 @@ button.onclick = function() {
 //                 r: 0
 //             },
 //             {
-//                 x: 50,
-//                 y: resultCyan,
-//                 r: 5
+//                 x: 70,
+//                 y: 20,
+//                 r: 50
 //             },
 //             {
-//                 x: 50,
-//                 y: resultMagenta,
-//                 r: 5
+//                 x: 45,
+//                 y: 15,
+//                 r: 40
 //             },
 //             {
-//                 x: 50,
-//                 y: resultYellow,
-//                 r: 5
+//                 x: 80,
+//                 y: 10,
+//                 r: 30
 //             },
 //             {
-//                 x: 50,
-//                 y: resultBlacK,
-//                 r: 5
+//                 x: 11,
+//                 y: 5,
+//                 r: 20
 //             },
 //             {
 //                 x: 100,
@@ -462,3 +463,15 @@ button.onclick = function() {
 //     // Configuration options go here
 //     options: {}
 // });
+
+function makeid() {
+    var text = "";
+    var possible = "ABCD";
+  
+      text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text;
+  }
+  
+  console.log(makeid());
+
