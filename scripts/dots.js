@@ -406,63 +406,64 @@ var calculates = function() {
 //клик по кнопке
 button.onclick = function() {
     calculates();
+    makeid();
+    
+    // For a bubble chart
+var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'bubble',
 
-    var graph = document.querySelector('.graph-cont');
-    graph.classList.add('togglegraph');
+    // The data for our dataset
+    data: {
+        labels: [],
+        datasets: [{
+            label: 'Calculated Values',
+            backgroundColor: ['transparent', 'rgb(0, 200, 255)', 'rgb(240, 0, 150)', 'rgb(255, 255, 0)', 'rgb(0, 0, 0)', 'transparent'],
+            borderColor: 'rgb(0, 0, 0)',
+            data: [
+            {
+                x: 0,
+                y: 0,
+                r: 0
+            },
+            {
+                x: 50,
+                y: dotGainCyan,
+                r: 5
+            },
+            {
+                x: 50,
+                y: dotGainMagenta,
+                r: 5
+            },
+            {
+                x: 50,
+                y: dotGainYellow,
+                r: 5
+            },
+            {
+                x: 50,
+                y: dotGainBlacK,
+                r: 5
+            },
+            {
+                x: 100,
+                y: 30,
+                r: 0
+            }]
+        }]
+    },
+
+    // Configuration options go here
+    options: {}
+});
+
     var curveResult = document.querySelector('.curve__result');
     curveResult.textContent = makeid();
 }
 
-// // For a bubble chart
-// var ctx = document.getElementById('myChart').getContext('2d');
-// var chart = new Chart(ctx, {
-//     // The type of chart we want to create
-//     type: 'bubble',
 
-//     // The data for our dataset
-//     data: {
-//         labels: [],
-//         datasets: [{
-//             label: 'Calculated Values',
-//             backgroundColor: ['transparent', 'rgb(0, 200, 255)', 'rgb(240, 0, 150)', 'rgb(255, 255, 0)', 'rgb(0, 0, 0)', 'transparent'],
-//             borderColor: 'rgb(0, 0, 0)',
-//             data: [
-//             {
-//                 x: 0,
-//                 y: 0,
-//                 r: 0
-//             },
-//             {
-//                 x: 70,
-//                 y: 20,
-//                 r: 50
-//             },
-//             {
-//                 x: 45,
-//                 y: 15,
-//                 r: 40
-//             },
-//             {
-//                 x: 80,
-//                 y: 10,
-//                 r: 30
-//             },
-//             {
-//                 x: 11,
-//                 y: 5,
-//                 r: 20
-//             },
-//             {
-//                 x: 100,
-//                 y: 30,
-//                 r: 0
-//             }]
-//         }]
-//     },
-
-//     // Configuration options go here
-//     options: {}
-// });
 
 function makeid() {
     var text = "";
@@ -473,5 +474,7 @@ function makeid() {
     return text;
   }
   
-  console.log(makeid());
+
+
+  
 

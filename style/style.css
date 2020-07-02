@@ -177,8 +177,8 @@ a {
         .main .result .output .graph-cont {
           width: 90%;
           height: 100%;
-          background: url(./graph.png) no-repeat;
-          background-size: 100%;
+          /* background: url(./graph.png) no-repeat;
+          background-size: 100%; */
          }
       .main .result .output .values {
         width: 30%;
@@ -407,7 +407,7 @@ a {
       width: 100%; }
     .main .result .get-results .container-for-button {
       width: 100%; } }
-      .togglegraph {
+      /* .togglegraph {
         background: url(./dots.png) no-repeat !important;
         background-size: 100% !important;
-      }
+      } */
